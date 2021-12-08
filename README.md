@@ -12,4 +12,4 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/
 
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_workspace
 
-[![tfsec](https://github.com/Rafael-Pazos/terraform-vmss/actions/workflows/tfsec-analysis.yml/badge.svg)](https://github.com/Rafael-Pazos/terraform-vmss/actions/workflows/tfsec-analysis.yml)
+[![tfsec](https://github.com/Rafael-Pazos/terraform-vmss-logs/actions/workflows/tfsec-analysis.yml/badge.svg)](https://github.com/Rafael-Pazos/terraform-vmss/actions/workflows/tfsec-analysis.yml)
