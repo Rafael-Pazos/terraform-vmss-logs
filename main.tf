@@ -147,7 +147,6 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
    computer_name_prefix = "vmlab"
    admin_username       = var.admin_user
    admin_password       = var.admin_password
-   custom_data          = file("web.conf")
  }
 
  os_profile_linux_config {
@@ -281,3 +280,12 @@ resource "azurerm_virtual_machine_extension" "jumpboxdep" {
   type_handler_version = "9.5"
   auto_upgrade_minor_version = true
 }  
+
+resource "azurerm_virtual_machine_extension" "jumpboxnet" {
+  name                 = "NetworkWatcherAgent"
+  virtual_machine_id = azurerm_virtual_machine.jumpbox.id
+  publisher            = "Microsoft.Azure.NetworkWatcher"
+  type                 = "NetworkWatcherAgentLinux"
+  type_handler_version = "1.4"
+  auto_upgrade_minor_version = true
+}
