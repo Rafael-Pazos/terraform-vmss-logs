@@ -17,9 +17,9 @@ resource "azurerm_monitor_action_group" "sub_admins" {
   }
 }
 
-resource "azurerm_consumption_budget_subscription" "example" {
-  name            = "example"
-  subscription_id = data.azurerm_subscription.current.id
+resource "azurerm_consumption_budget_subscription" "budget_1000" {
+  name            = "rpr_eu_subs_1000"
+  subscription_id = data.azurerm_subscription.current.subscription_id
 
   amount     = 1000
   time_grain = "Monthly"
