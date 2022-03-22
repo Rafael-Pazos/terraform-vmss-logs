@@ -48,5 +48,8 @@ resource "azurerm_consumption_budget_subscription" "budget_1000" {
     contact_groups = [
       azurerm_monitor_action_group.sub_admins.id,
     ]
+    contact_roles = [
+      "Owner",
+    ]
   }
 }
